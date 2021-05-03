@@ -17,6 +17,7 @@
         <div class="offset-1 col-10 row justify-content-center bg-secondary rounded m-4">
           <input class="btn btn-outline-primary rounded m-4 text-warning" type="text" id="displayNumberOfClick" />
           <button class="btn btn-outline-warning p-3 m-3" id="clickMe" name="button" type="button">CLIQUEZ MOI !</button>
+          <p id="clickMe"></p>
         </div>
       </div>
     </div>
@@ -26,11 +27,22 @@
   <script>
     var scoreOfClicks = 0;
     $(document).ready(function() {
+      // au clic surle bouton
+      //$('button').click(function() {
       $('#clickMe').click(function() {
+        // j'incrémente ma variable 'scoreOfClicks'
         scoreOfClicks++;
+        // on affiche dans l'input le nombre de clics
         $('#displayNumberOfClick').val('Vous avez cliqué ' + scoreOfClicks + ' fois !');
       });
     });
+  // ************************* CORRECTION lAETITIA *******************
+  // let count = 0;
+  // $('button').click(function () {
+  // count +=1;
+  // $('#clickMe').html(count);
+  // });
+  //
   </script>
 </body>
 
